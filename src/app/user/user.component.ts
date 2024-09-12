@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output, output } from '@angular/core';
 import { DUMMY_USERS } from '../dummy-users';
 
 const randomIndex = Math.floor(Math.random() * DUMMY_USERS.length)
@@ -13,6 +13,7 @@ export class UserComponent {
   @Input({ required: true }) avatar!: string
   @Input({ required: true }) name!: string
   @Output() select = new EventEmitter()
+  // select = output<string>()
 
   get imagePath() {
     return 'assets/users/' + this.avatar
