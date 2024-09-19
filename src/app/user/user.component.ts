@@ -13,10 +13,8 @@ const randomIndex = Math.floor(Math.random() * DUMMY_USERS.length)
 
 @Component({
   selector: 'app-user',
-  standalone: true,
   templateUrl: './user.component.html',
-  styleUrls: ['./user.component.css'],
-  imports: [CardComponent]
+  styleUrls: ['./user.component.css']
 })
 export class UserComponent {
   @Input({ required: true }) user!: User
